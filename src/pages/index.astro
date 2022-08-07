@@ -1,38 +1,13 @@
 ---
-const siteTitle = "Jack Faulkner - Developer";
-const description =
-  "Software developer";
+import Header from "../components/header.astro";
+import Navbar from "../components/navbar.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content={description} />
-		<meta property="og:title" content={siteTitle} />
-    	<meta property="og:description" content={description} />
-		<title>{siteTitle}</title>
-		<title>Astro</title>
-		
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"> 
-	</head>
+
 
 	<body class="bg-gray-300 ">
-		<nav class="flex items-center w-1/2 mx-auto font-poppins text-sm">
-	<div class="container flex flex-wrap justify-between mt-4">
-		<a href="/" class="hover:bg-violet-300 p-1.5" aria-current="page">Jack.</a>
-	  <div class="">
-		<ul class="flex flex-wrap justify-between">
-		  <li>
-			<a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Blog.</a>
-		  </li>
-		  <li>
-			<a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Contact.</a>
-		  </li>
-		</ul>
-	  </div>
-	</div>
-  </nav>
-  
+		<Header></Header>
+		<Navbar></Navbar>
 	</body>
 </html>
