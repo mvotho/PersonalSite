@@ -1,18 +1,22 @@
 ---
+
+import Hammenu from "../components/hammenu.astro";
+
 ---
 
-<nav class="flex items-center w-1/2 mx-auto font-poppins text-sm">
-	<div class="container flex flex-wrap justify-between mt-4">
-		<a href="/" class="hover:bg-violet-300 p-1.5" aria-current="page">Jack.</a>
-	  <div class="">
-		<ul class="flex flex-wrap justify-between">
-		  <li>
-			<a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Blog.</a>
-		  </li>
-		  <li>
-			<a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Contact.</a>
-		  </li>
-		</ul>
-	  </div>
-	</div>
-  </nav>
+<nav class="flex items-center justify-center font-poppins text-sm mx-auto">
+    <div class="flex mt-3.5 pt-1.5 space-x-80 items-center sm:space-x-96">
+        <a href="/" class="hover:bg-violet-300 p-1.5" aria-current="page">Jack.</a>
+            
+        <button class="sm:hidden hover:bg-violet-300 p-1.5"><Hammenu></Hammenu></button>
+        
+        <ul class="hidden sm:flex justify-between ">
+                <li>
+                    <a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Blog.</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Contact.</a>
+                </li>
+            </ul>
+    </div>
+</nav>
