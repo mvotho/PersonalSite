@@ -1,15 +1,23 @@
 ---
 
 import Hammenu from "../components/hammenu.astro";
+import Close from "../components/closemenu.astro"
 ---
 
 <nav class="font-poppins">
     <div class="flex items-center justify-center text-sm mx-auto space-x-80 sm:space-x-96">
         <div class="flex mt-3.5 pt-1.5 space-x-80 items-center sm:space-x-96">
             <a href="/" class="hover:bg-violet-300 p-1.5" aria-current="page">Jack.</a>
-            <button id="menu-toggle" class="sm:hidden hover:bg-violet-300 p-1.5">
-                <Hammenu></Hammenu>
-            </button>
+            <div>
+                <button id="menu-toggle" class="sm:hidden hover:bg-violet-300 p-1.5">
+                    <Hammenu></Hammenu>
+                </button>
+                <button id="close-toggle" class=" hidden sm:hidden hover:bg-violet-300 p-1.5">
+                    <Close></Close>
+                </button>
+            </div>
+
+
         </div>
         <ul class="hidden mt-3.5 pt-1.5 sm:flex">
             <li>
@@ -35,10 +43,26 @@ import Hammenu from "../components/hammenu.astro";
     <script>
         let menuButton = document.getElementById('menu-toggle');
         menuButton.addEventListener('click', function () {
-          let flyout = document.getElementById('mobile-menu').classList
-          flyout.toggle('hidden')
+            let flyout = document.getElementById('mobile-menu').classList
+            let burg = document.getElementById('menu-toggle').classList
+            let close = document.getElementById('close-toggle').classList
+            flyout.toggle('hidden')
+            burg.toggle("hidden")
+            close.toggle("hidden")
+
         })
-      </script>
-      
+
+
+        let closeButton = document.getElementById("close-toggle");
+        closeButton.addEventListener('click', function () {
+            let flyout = document.getElementById('mobile-menu').classList
+            let burg = document.getElementById('menu-toggle').classList
+            let close = document.getElementById('close-toggle').classList
+            flyout.toggle('hidden')
+            burg.toggle("hidden")
+            close.toggle("hidden")
+        });
+    </script>
+
 
 </nav>
