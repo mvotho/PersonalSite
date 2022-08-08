@@ -5,8 +5,8 @@ import Close from "../components/closemenu.astro"
 ---
 
 <nav class="font-poppins">
-    <div class="flex items-center justify-center text-sm mx-auto space-x-80 sm:space-x-96">
-        <div class="flex mt-3.5 pt-1.5 space-x-80 items-center sm:space-x-96">
+    <div class="flex items-center justify-center text-sm mx-auto">
+        <div class="flex mt-3.5 pt-1.5 space-x-80 items-center">
             <a href="/" class="hover:bg-violet-300 p-1.5" aria-current="page">Jack.</a>
             <div>
                 <button id="menu-toggle" class="sm:hidden hover:bg-violet-300 p-1.5">
@@ -43,26 +43,24 @@ import Close from "../components/closemenu.astro"
     <script>
         let menuButton = document.getElementById('menu-toggle');
         menuButton.addEventListener('click', function () {
-            let flyout = document.getElementById('mobile-menu').classList
-            let burg = document.getElementById('menu-toggle').classList
-            let close = document.getElementById('close-toggle').classList
-            flyout.toggle('hidden')
-            burg.toggle("hidden")
-            close.toggle("hidden")
+            toggle();
 
         })
 
 
         let closeButton = document.getElementById("close-toggle");
         closeButton.addEventListener('click', function () {
+            toggle();
+        });
+
+        function toggle(){
             let flyout = document.getElementById('mobile-menu').classList
             let burg = document.getElementById('menu-toggle').classList
             let close = document.getElementById('close-toggle').classList
             flyout.toggle('hidden')
             burg.toggle("hidden")
             close.toggle("hidden")
-        });
+        }
+
     </script>
-
-
 </nav>
