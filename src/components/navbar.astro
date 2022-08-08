@@ -1,22 +1,44 @@
 ---
 
 import Hammenu from "../components/hammenu.astro";
-
 ---
 
-<nav class="flex items-center justify-center font-poppins text-sm mx-auto">
-    <div class="flex mt-3.5 pt-1.5 space-x-80 items-center sm:space-x-96">
-        <a href="/" class="hover:bg-violet-300 p-1.5" aria-current="page">Jack.</a>
-            
-        <button class="sm:hidden hover:bg-violet-300 p-1.5"><Hammenu></Hammenu></button>
-        
-        <ul class="hidden sm:flex justify-between ">
-                <li>
-                    <a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Blog.</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Contact.</a>
-                </li>
-            </ul>
+<nav class="font-poppins">
+    <div class="flex items-center justify-center text-sm mx-auto space-x-80 sm:space-x-96">
+        <div class="flex mt-3.5 pt-1.5 space-x-80 items-center sm:space-x-96">
+            <a href="/" class="hover:bg-violet-300 p-1.5" aria-current="page">Jack.</a>
+            <button id="menu-toggle" class="sm:hidden hover:bg-violet-300 p-1.5">
+                <Hammenu></Hammenu>
+            </button>
+        </div>
+        <ul class="hidden mt-3.5 pt-1.5 sm:flex">
+            <li>
+                <a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Blog.</a>
+            </li>
+            <li>
+                <a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Contact.</a>
+            </li>
+        </ul>
     </div>
+
+    <div id="mobile-menu" class="hidden">
+        <ul class="absolute pt-0.5 inset-y-20 right-16 w-16">
+            <li class="pb-4">
+                <a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Blog.</a>
+            </li>
+            <li>
+                <a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Contact.</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        let menuButton = document.getElementById('menu-toggle');
+        menuButton.addEventListener('click', function () {
+          let flyout = document.getElementById('mobile-menu').classList
+          flyout.toggle('hidden')
+        })
+      </script>
+      
+
 </nav>
