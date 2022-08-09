@@ -5,21 +5,19 @@ import Close from "../components/closemenu.astro"
 ---
 
 <nav class="font-poppins">
-    <div class="flex w-32 text-sm ">
-        <div class="flex mt-3.5 pt-1.5 px-4 space-x-60 items-center">
-            <a href="/" class="hover:bg-violet-300 p-1.5" aria-current="page">Jack.</a>
-            <div class="mr-8">
-                <button id="menu-toggle" class="sm:hidden hover:bg-violet-300 p-1.5">
+    <div class=" py-2 w-screen sm:flex sm:flex-row sm:justify-between">
+        <div class="flex flex-row items-center justify-between">
+            <a href="/" class="hover:bg-violet-300 p-1.5 ml-4" aria-current="page">Jack.</a>
+            <div class="">
+                <button id="menu-toggle" class="mr-6 sm:hidden hover:bg-violet-300 p-1.5">
                     <Hammenu></Hammenu>
                 </button>
-                <button id="close-toggle" class=" hidden sm:hidden hover:bg-violet-300 p-1.5">
+                <button id="close-toggle" class=" mr-6 hidden sm:hidden hover:bg-violet-300 p-1.5">
                     <Close></Close>
                 </button>
             </div>
-
-
         </div>
-        <ul class="hidden mt-3.5 pt-1.5 sm:flex">
+        <ul class="hidden mt-3.5 pt-1.5 sm:flex sm:flex-row sm:w-screen">
             <li>
                 <a href="#" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Blog.</a>
             </li>
