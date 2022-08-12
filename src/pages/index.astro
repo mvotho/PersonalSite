@@ -2,15 +2,22 @@
 import Header from "../components/header.astro";
 import Navbar from "../components/navbar.astro";
 import Hero from "../components/hero.astro";
+import Heromob from "../components/heromob.astro";
 ---
 
 <html lang="en">
 
 <Header></Header>
 
-<body class="flex flex-row items-center selection:bg-violet-300">
+<body class=" selection:bg-violet-300">
 	<Navbar></Navbar>
-	<Hero></Hero>
+	<div class="sm:hidden">
+		<Heromob></Heromob>
+	</div>
+	<div class="hidden sm:flex sm:flex-row">
+		<Hero></Hero>
+	</div>
+	
 </body>
 
 </html>
