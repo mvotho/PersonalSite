@@ -19,7 +19,13 @@ import Close from "../components/closemenu.astro"
         </div>
         <ul class="hidden items-center sm:flex">
             <li>
-                <a href="/blog" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Blog.</a>
+                <a href="#" class="group relative p-1.5 m-4 hover:bg-violet-300 duration-300">
+                    Blog.
+                    <!-- Tooltip text here -->
+                    <span
+                        class="absolute hidden group-hover:flex -left-8 top-12 w-max px-2 py-1 bg-violet-300 text-center text-sm after:border-t-gray-700">Coming Soon.</span>
+                </a>
+                
             </li>
             <li>
                 <a href="/contact" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Contact.</a>
@@ -30,10 +36,16 @@ import Close from "../components/closemenu.astro"
     <div id="mobile-menu" class="hidden sm:hidden">
         <ul class="absolute pt-0.5 inset-y-20 right-16 w-16">
             <li class="pb-4">
-                <a href="/blog" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Blog.</a>
+                <a href="#" class="group relative p-1.5 hover:bg-violet-300 duration-300">
+                    Blog.
+                    <!-- Tooltip text here -->
+                    <span
+                        class="absolute hidden group-hover:flex -left-8 -top-8 w-max px-2 py-1 bg-violet-300 text-center text-sm after:border-t-gray-700">Coming Soon.</span>
+                </a>
+
             </li>
             <li>
-                <a href="/contact" class="hover:bg-violet-300 p-1.5 m-4" aria-current="page">Contact.</a>
+                <a href="/contact" class="hover:bg-violet-300 p-1.5" aria-current="page">Contact.</a>
             </li>
         </ul>
     </div>
@@ -51,7 +63,7 @@ import Close from "../components/closemenu.astro"
             toggle();
         });
 
-        function toggle(){
+        function toggle() {
             let flyout = document.getElementById('mobile-menu').classList
             let burg = document.getElementById('menu-toggle').classList
             let close = document.getElementById('close-toggle').classList
