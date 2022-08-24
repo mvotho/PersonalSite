@@ -1,6 +1,6 @@
 # PersonalSite
 
-Buit using [astro](https://astro.build)
+Built using [astro](https://astro.build)
 
 ##  Commands
 
