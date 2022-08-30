@@ -6,7 +6,7 @@ const apiURL = 'https://api.github.com/users/mvotho/repos';
 
 const response = await fetch(apiURL,{
     headers: {
-            'Authorization': import.meta.GITHUBAUTH;
+            'Authorization': import.meta.env.GITHUBAUTH
         }
 });
 const data = await response.json();
