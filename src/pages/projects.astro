@@ -1,0 +1,21 @@
+---
+import Projectcard from "../components/projectcard.astro";
+import Navbar from "../components/navbar.astro";
+import Header from "../components/header.astro";
+const apiURL = 'https://api.github.com/users/mvotho/repos';
+
+const response = await fetch(apiURL,{
+    headers: {
+            'Authorization': import.meta.GITHUBAUTH;
+        }
+});
+const data = await response.json();
+console.log(data)
+---
+<Header></Header>
+<Navbar></Navbar>
+<div class="font-poppins flex flex-col mx-auto mt-20 items-center">Projects</div>
+<div class="flex flex-wrap items-center mx-auto w-7/12 mt-12 ">
+{data.reverse().map(repo =>(
+    <Projectcard name={repo.name} desc={repo.description} url={repo.html_url} lang={repo.language}/>
+))}</div>
